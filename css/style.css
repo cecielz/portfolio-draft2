@@ -4,17 +4,23 @@ body{
 	margin:1%;
 	padding:1%;
 	font-size:150%;
+	font-family: Verdana;
+	line-height: 1.25;
+
 }
 
 /*Make the h1 heading bigger with a bold font*/
 h1{
 	font-size: 2em; 
 	font-weight: bold;
+	font-family: Verdana;
+
 }
 
 .active {
 	background: white;
-    text-transform: uppercase;
+    
+	font-weight: bold;
 	text-align: center;
 	transform: rotate(-0.02turn);
 
@@ -24,18 +30,34 @@ h1{
 	text-decoration: none;;
 }
 
-a :hover {
-	color: #FF00FF;
-}
+/* visited link */
+a:visited {
+	color: #0000FF;
+  }
+  
+  /* mouse over link */
+  a:hover {
+	color: brown;
+  }
+  
+  /* selected link */
+  a:active {
+	color: #0000FF;
+  }
 
 /*Style the images*/
 img{
     height: 200px;
-    width:auto;
     border: 3px solid blue;
     padding: 25px;
     border-radius: 10px;
-    margin: 10px;
+	margin: 10px;
+	object-fit: cover;
+
+}
+
+img:hover{
+	transform: scale(1.1);
 }
 
 
@@ -53,25 +75,44 @@ p, h1, h2 {
 
 /*Add borders around the main components and some
 space too*/
-header, nav, main, h1, footer{
-	border: 2px solid grey;
+header, main, nav, h1, footer{
+	border: 0px solid grey;
 	margin: 10px 0;
 }
+
+
+#gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 30%);
+	grid-template-rows: repeat(3, 30%);
+	
+	margin-top: 44px;
+	justify-items: center;
+	justify-content: center;
+	align-items: stretch;
+	align-content: center;
+	grid-auto-flow: column;
+	width:auto;
+
+	/* gap: 10px; */
+  }
 
 
 /*Change the styling for all of the list 
 items in the nav section*/
 nav li{
-	background-color: #8b4dff;
+	background-color: #a777ff;
 	padding:10px;
 	border:1px solid rgb(185, 172, 112);
 	display: inline-block;
 	width: 22%;
+	border-radius: 30px;
+	text-align:center;
 }
 
 
 /*Added this so the links stay the same color*/
-a:visited{color:#0000FF}
+/* a:visited{color:#0000FF} */
 
 a.skip-link {
 	background-color: #8b4dff;
